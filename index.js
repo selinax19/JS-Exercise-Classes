@@ -85,8 +85,8 @@ class Car {
     this.tank = this.tank + gallons;
   }
   drive(dist){
-    const drivableMiles = this.tanks * this.milesPerGallon;
-    if (dist <= drivableMiles){
+    const drivableMiles = this.tank * this.milesPerGallon;
+    if(dist <= drivableMiles){
       this.odometer = this.odometer + dist;
       this.tank = this.tank - (dist / this.milesPerGallon);
     }else{
@@ -116,7 +116,7 @@ class Lambdasian {
     this.location = location;
   }
   speak(){
-    return `Hello my name is ${this,name}, I am from ${this.location}`;
+    return `Hello my name is ${this.name}, I am from ${this.location}`;
   }
 }
 
@@ -196,9 +196,9 @@ class Student extends Lambdasian{
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 class ProjectManager extends Instructor{
-  constructors({name, age, location, specialty, favLanguage, catchPhrase, gradClassName, 
+  constructor({name, age, location, specialty, favLanguage, catchPhrase, gradClassName, 
     favInstructor}){
-      super({name,age, location, specialty, favLanguage, catchPhrase, gradClassName, 
+      super({name, age, location, specialty, favLanguage, catchPhrase, gradClassName, 
       favInstructor});
   this.gradClassName = gradClassName;
   this.favInstructor = favInstructor;
